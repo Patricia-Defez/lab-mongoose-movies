@@ -1,4 +1,8 @@
-<h2>Celebrity details</h2>
+<h2>Celebrity Details</h2>
 <p><span>Name: </span>{{celebrity.name}}</p>
 <p><span>Occupation: </span>{{celebrity.occupation}}</p>
 <p><span>Catch Phrase: </span>{{celebrity.catchPhrase}}</p>
+<form action="/celebrities/{{celebrity.id}}/edit" method='GET'>
+      <button class="btn btn-warning" type="submit">Update</button> 
+</form>
+<a href="/celebrities/">Return to Celebrities List</a>
