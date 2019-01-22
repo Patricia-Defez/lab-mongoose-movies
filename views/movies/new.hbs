@@ -1,0 +1,27 @@
+{{#if movie.isNew }}
+    <h2>New Movie</h2>
+    <form action="/movies/new" method="post">
+{{else}}
+    <h2> Movie</h2>
+    <form action="/movies/{{movie.id}}/edit" method="post">
+{{/if}}
+
+    <div>
+        <label >Title:</label>
+        <input type="text" name="title" value={{movie.title}}>
+    </div>
+   <div>
+        <label >Genre:</label>
+        <input type="text" name="genre" value={{movie.genre}}>
+    </div>
+    <div>
+        <label >Plot:</label>
+        <textarea name="plot">{{movie.plot}}</textarea>
+    </div>
+
+    {{#if celebrity.isNew }}
+    <button type="submit" class="btn btn-primary">Add</button>
+    {{else}}
+    <button type="submit" class="btn btn-primary">Change</button>
+    {{/if}}
+</form>
